@@ -1,0 +1,50 @@
+body{
+    background: url(img/DigitalNomad-Long-Term-Travel.jpg);
+    background-size:cover;
+    text-align:center;
+    height:100vh;
+    color:#273c75;
+    padding:1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul{
+    display:flex;
+    justify-content: center;
+    list-style:none;
+}
+
+ul li{
+    background:white;
+    margin: 0 1rem;
+    cursor:pointer;
+    width:100px;
+    padding:0.5rem;
+    border-radius:5px;
+    border:2px solid #273c75;
+    transition:.3s;
+}
+
+ul li:hover{
+    background:#273c75;
+    color:white;
+    border-color:white;
+}
+
+@media screen and (max-width:1026px){
+    ul li{
+        width:auto;
+    }
+}
+
+@media screen and (max-width:896px){
+    ul{
+        flex-direction: column;
+        margin:0 auto;
+        width:200px;
+    }
+    
+    ul li{
+       margin:0.4rem 0; 
+    }
+}
