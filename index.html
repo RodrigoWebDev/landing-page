@@ -1,24 +1,103 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Digital Nomad | Landing Page</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
     <h1>The Digital Nomad</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
     <ul>
-        <li>Portfolio</li>
-        <li>Films</li>
-        <li>Travel Vlog</li>
-        <li>Twitter</li>
-        <li>Instagram</li>
-        <li>Linkedin</li>
-        <li>Contact me</li>
+        <li class="button">Portfolio</li>
+        <li class="button">Films</li>
+        <li class="button">Travel Vlog</li>
+        <li class="button">Contact me</li>
     </ul>
+
+    <div class="container">
+        <div class="painel1 painel">
+            <h2>Portfolio</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/portfolio1.jpg" alt="portfolio ">
+                </div>
+                <div class="col-md-6">
+                    <img src="img/portfolio2.jpg" alt="portfolio ">
+                </div>
+                <div class="col-md-6">
+                    <img src="img/portfolio3.png" alt="portfolio ">
+                </div>
+                <div class="col-md-6">
+                    <img src="img/portfolio1.jpg" alt="portfolio ">
+                </div>
+            </div>
+        </div>
+        <div class="painel2 painel">
+            <h2>Films</h2>
+            <img class="float-left" src="img/portfolio2.jpg" alt="Film">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo mollitia libero exercitationem voluptatibus aliquid quo saepe, sequi, cupiditate dignissimos architecto perspiciatis, labore beatae! Similique fuga esse nisi asperiores voluptatem molestiae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo mollitia libero exercitationem voluptatibus aliquid quo saepe, sequi, cupiditate dignissimos architecto perspiciatis, labore beatae! Similique fuga esse nisi asperiores voluptatem molestiae.</p>
+        </div>
+        <div class="painel3 painel">
+            <h2>Travel Vlog</h2>
+            <div style="max-height:200px;overflow: hidden;">
+                <img src="img/DigitalNomad-Long-Term-Travel.jpg" alt="Travel vlog">
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo mollitia libero exercitationem voluptatibus aliquid quo saepe, sequi, cupiditate dignissimos architecto perspiciatis, labore beatae! Similique fuga esse nisi asperiores voluptatem molestiae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo mollitia libero exercitationem voluptatibus aliquid quo saepe, sequi, cupiditate dignissimos architecto perspiciatis, labore beatae! Similique fuga esse nisi asperiores voluptatem molestiae.</p>
+        </div>
+        <div class="painel4 painel">
+            <h2>Contact me</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Message">
+                </div>
+                <button type="submit" class="button">Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <footer>
+        <p>Developed by <a href="https://rodrigowebdev.github.io/devninja.github.io/" target="_blank">Rodrigo Queiroz</a></p>
+    </footer>
+    <script src="jquery.min.js"></script>
+    <script>
+        
+        let button = document.getElementsByClassName("button");
+        let painel = document.getElementsByClassName("painel");
+        
+        for(i = 0; i < painel.length; i++){
+            painel[i].style.display = "none";
+        }
+        
+         painel[0].style.display = "block";
+        
+        for(let i=0; i < button.length - 1; i++)
+        button[i].onclick = function(){
+             for(let j=0; j < painel.length; j++){
+                 painel[j].style.display = "none";
+                 console.log(painel[j]);
+             }
+            painel[i].style.display = "block";
+        }
+       
+
+    </script>
 </body>
+
 </html>

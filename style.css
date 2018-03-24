@@ -1,50 +1,105 @@
-body{
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
     background: url(img/DigitalNomad-Long-Term-Travel.jpg);
-    background-size:cover;
-    text-align:center;
-    height:100vh;
-    color:#273c75;
-    padding:1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 100%;
+    color: #273c75;
     font-family: 'Roboto', sans-serif;
 }
 
-ul{
-    display:flex;
+h1{
+    margin:1rem;
+}
+
+ul {
+    display: flex;
     justify-content: center;
-    list-style:none;
+    list-style: none;
+    padding:3rem 0;
+    align-items:center;
 }
 
-ul li{
+.button{
+    background: white;
+    margin: 5px 1rem;
+    cursor: pointer;
+    width: 100px;
+    padding:5px;
+    border-radius: 5px;
+    border: 2px solid #273c75;
+    transition: .3s;
+}
+
+.button:hover {
+    background: #273c75;
+    color: white;
+    border-color: white;
+}
+
+.painel{
     background:white;
-    margin: 0 1rem;
-    cursor:pointer;
-    width:100px;
-    padding:0.5rem;
-    border-radius:5px;
-    border:2px solid #273c75;
-    transition:.3s;
+    border: 2px solid #273c75;
+    border-radius: 5px;
+    padding:2rem;
 }
 
-ul li:hover{
-    background:#273c75;
-    color:white;
-    border-color:white;
+.painel h2{
+    margin-bottom:1rem;
 }
 
-@media screen and (max-width:1026px){
-    ul li{
-        width:auto;
+.painel p{
+    text-align:left;
+}    
+
+.painel1 img, .painel3 img{
+    width:100%;
+}
+
+.painel2 img{
+    width:20%;
+    margin-right:1rem;
+}
+
+.painel4 form{
+    max-width:600px;
+    margin:0 auto;
+}
+
+footer{
+    padding:2rem;
+}
+footer p{
+    text-shadow:1px 1px 1px black;
+}
+
+footer a{
+    color:inherit;
+}
+
+footer a:hover{
+    color: #0b193d;
+}
+
+@media screen and (max-width:1026px) {
+    ul li {
+        width: auto;
     }
 }
 
-@media screen and (max-width:896px){
-    ul{
+@media screen and (max-width:896px) {
+    ul {
         flex-direction: column;
-        margin:0 auto;
-        width:200px;
+        margin: 0 auto;
+        width: 200px;
     }
-    
-    ul li{
-       margin:0.4rem 0; 
+
+    ul li {
+        margin: 0.4rem 0;
     }
 }
